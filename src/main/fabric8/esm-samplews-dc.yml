@@ -35,7 +35,7 @@ spec:
         deploymentconfig: esm-samplews
     spec:
       containers:
-      - image: 172.30.1.1:5000/fis-esm-samplew/esm-samplews
+      - image: esm-samplews:latest
         imagePullPolicy: Always
         name: esm-samplews
         ports:
@@ -61,7 +61,7 @@ spec:
       from:
         kind: ImageStreamTag
         name: esm-samplews:latest
-        namespace: karafsti
+        namespace: fis-esm-samplews
     type: ImageChange
 status:
   availableReplicas: 0
